@@ -1,13 +1,11 @@
 function SearchBar() {
     return (
-        <div className="search-bar">
-            <form action=".">
-                <div className="input-group">
-                    <input className="link-input" type="text" />
-                    <input className="preview-btn" type="button" value="Preview" />
-                </div>
-            </form>
-        </div>
+        <form className="d-flex gap-2">
+            <div className="search-bar">
+                <input className="form-control" type="text" placeholder="yourwebsite.com" autofocus="autofocus" />
+                <button className="btn btn-gradient btn-submit" type="submit"> <i className="fa fa-arrow-right"> </i> </button>
+            </div>
+        </form>
     );
 }
 
