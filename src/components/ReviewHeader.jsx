@@ -1,9 +1,14 @@
-import { useRef } from "react";
+// import './ReviewHeader.scss';
+import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SearchBar() {
+const ReviewHeader = (props) => {
     const urlRef = useRef();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        urlRef.current.value = props.url;
+    });
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -19,13 +24,13 @@ function SearchBar() {
     }
 
     return (
-        <form className="d-flex gap-2" onSubmit={handleSubmit}>
-            <div className="search-bar">
-                <input name="url" className="form-control" type="text" placeholder="yourwebsite.com" autoFocus="autofocus" ref={urlRef} />
-                <button className="btn btn-gradient btn-submit" type="submit"> <i className="fa fa-arrow-right"> </i> </button>
+        <form className="d-flex gap-2 my-5 py-2" onSubmit={handleSubmit}>
+            <div className="search-bar-header">
+                <input name="url-header" className="form-control-header" type="text" placeholder="yourwebsite.com" autoFocus="autofocus" ref={urlRef} />
+                <button className="btn btn-gradient btn-submit-header" type="submit"> <i className="fas fa-redo"> </i> </button>
             </div>
         </form>
     );
-}
+};
 
-export default SearchBar;
+export default ReviewHeader;

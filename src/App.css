@@ -17,8 +17,8 @@ html{
 .app {
   background: url('./images/bg.svg');
   background-position: top -15rem left -20rem;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .navbar .brand-icon {
@@ -30,12 +30,13 @@ html{
   transform: translateY(-0.25rem);
 }
 
-.navbar .brand-name{
+.brand-title{
   color: var(--color-primary-dark);
   font-size: 2rem;
   font-weight: 700;
   font-family: 'Kanit', sans-serif;
   text-shadow: var(--color-secondary) 1px 1px;
+  text-decoration: none;
 }
 
 .navbar-shadow {
@@ -109,4 +110,57 @@ html{
   position: absolute;
   right: 0.8rem;
   top: 0.5rem;
+ }
+
+ /* Review Header */
+
+ .search-bar-header {
+   width: 100%;
+   margin: auto;
+   position: relative;
+ }
+
+ .search-bar-header::before {
+   content: "PREVIEW";
+   color: var(--color-secondary);
+   position: absolute;
+   font-size: 1rem;
+   line-height: 4rem;
+   left: 1rem;
+   text-align: center;
+   display: block;
+   width: 6rem;
+   font-weight: 900;
+ }
+
+ .form-control-header {
+   font-size: 1rem;
+   line-height: 4rem;
+   padding-top: 0;
+   padding-bottom: 0;
+   background: #ffffff;
+   box-shadow: 0 0 50px 0 rgb(0 0 0 / 10%);
+   border-radius: 2rem;
+   width: 100%;
+   height: 4rem;
+   border: none;
+   padding-left: 8rem;
+   padding-right: 1rem;
+ }
+
+ .btn-submit-header {
+   font-size: 1.6rem;
+   border-radius: 50%;
+   line-height: 1;
+   width: 3rem;
+   height: 3rem;
+   position: absolute;
+   right: 0.8rem;
+   top: 0.5rem;
+ }
+
+ .card-description{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
  }
