@@ -1,4 +1,3 @@
-// import './Home.scss';
 import Hero from "../components/Hero";
 import SearchBar from "../components/SearchBar";
 

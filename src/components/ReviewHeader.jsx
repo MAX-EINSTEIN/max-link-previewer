@@ -1,4 +1,3 @@
-// import './ReviewHeader.scss';
 import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -18,7 +17,7 @@ const ReviewHeader = (props) => {
             console.log('url: ', url);
             navigate(`/preview/?url=${url}`);
         } else {
-            console.log(`Error: ${url} is not a valid url.`);
+            urlRef.current.placeholder = "Please enter a valid url";
         }
         urlRef.current.value = "";
     }

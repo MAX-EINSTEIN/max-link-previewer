@@ -13,6 +13,7 @@ function SearchBar() {
             console.log('url: ', url);
             navigate(`/preview/?url=${url}`);
         } else {
+            urlRef.current.placeholder = "Please enter a valid url";
             console.log(`Error: ${url} is not a valid url.`);
         }
         urlRef.current.value = "";
